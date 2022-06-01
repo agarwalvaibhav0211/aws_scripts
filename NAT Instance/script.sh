@@ -12,6 +12,8 @@ mkfile() { mkdir -p "$(dirname "$1")" && touch "$1" ;  }
 
 mkfile  ${bin_location}/nat-setup
 curl $nat_setup_url -o ${bin_location}/nat-setup
+chmod +x ${bin_location}/nat-setup
+chmod 744 ${bin_location}/nat-setup
 
 
 mkfile /etc/systemd/system/nat.service
