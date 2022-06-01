@@ -3,8 +3,8 @@ Description=NAT Service for AWS
  
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/nat-setup start
-ExecStop=/usr/local/bin/nat-setup stop
+ExecStart=/usr/local/bin/nat-setup start >> /tmp/nat-setup-start
+ExecStop=/usr/local/bin/nat-setup stop >> /tmp/nat-setup-stop
 RemainAfterExit=yes
 Restart=no
 
