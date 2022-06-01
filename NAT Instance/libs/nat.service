@@ -1,0 +1,10 @@
+[Unit]
+Description=NAT Service for AWS
+WantedBy=network-up.target
+ 
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/nat-setup start
+ExecStop=/usr/local/bin/nat-setup stop
+RemainAfterExit=yes
+Restart=no
