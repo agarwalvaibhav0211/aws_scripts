@@ -1,5 +1,6 @@
 [Unit]
 Description=NAT Service for AWS
+After=network-online.target
  
 [Service]
 Type=simple
@@ -9,4 +10,4 @@ RemainAfterExit=yes
 Restart=no
 
 [Install]
-WantedBy=network-up.target
+WantedBy=multi-user.target
